@@ -18,7 +18,7 @@ pipeline {
                 // Build your application (e.g., compile code, generate artifacts)
                 echo 'build triggered automaticallu from webhook on commit from local repo'
 		echo 'sudo apt-get-update'
-		sh sudo apt-get-update
+		sh 'sudo apt-get-update'
             }
         }
         
