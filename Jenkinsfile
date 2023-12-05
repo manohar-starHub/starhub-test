@@ -1,5 +1,6 @@
 pipeline {
-    agent { docker { image 'maven:3.9.5-eclipse-temurin-17-alpine' } }
+    // agent { docker { image 'maven:3.9.5-eclipse-temurin-17-alpine' } }
+	agent any
     options {
         // Timeout counter starts AFTER agent is allocated
         timeout(time: 100000, unit: 'SECONDS')
@@ -16,7 +17,8 @@ pipeline {
     
         stage('MVN version') {
             steps {
-                sh 'mvn --version'
+                sh 'docker pull maven:3.9.5-eclipse-temurin-17-alpine'
+		sh 'mvn --version'
             }
         }
 
