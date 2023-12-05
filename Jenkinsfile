@@ -17,6 +17,8 @@ pipeline {
     
         stage('MVN version') {
             steps {
+		sh 'docker login -u starhubcicdct -p St@rHub@1234'
+		echo 'After Docker login '
                 sh 'docker pull maven:3.9.5-eclipse-temurin-17-alpine'
 		sh 'mvn --version'
             }
