@@ -13,16 +13,7 @@ pipeline {
             }
         }
 
-	    stage('MongoDB') {
-            steps {
-                // Build your application (e.g., compile code, generate artifacts)
-                echo 'Create Mongo DB and start the services'
-		
-		sh 'apt-get-update'
-		sh 'apt-get install gnupg'
-		
-            }
-        }
+	    
         
         stage('Build') {
             steps {
