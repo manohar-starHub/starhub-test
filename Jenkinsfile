@@ -13,17 +13,12 @@ pipeline {
                 checkout scm
             }
         }
-
-    
-
-
-        
         stage('Build') {
             steps {
                 // Build your application (e.g., compile code, generate artifacts)
                 echo 'build triggered automaticallu from webhook on commit from local repo'
 		echo 'sudo apt-get-update'
-		// sh 'apt-get-update'
+		sh 'apt-get-update'
             }
         }
         
