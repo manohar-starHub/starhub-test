@@ -16,7 +16,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Build your application (e.g., compile code, generate artifacts)
-                echo 'build triggered automaticallu from webhook on commit from local repo'
+                echo 'build triggered automatically from webhook on commit from local repo'
 		echo 'sudo apt-get-update'
 		sh 'sudo apt-get update -y'
             }
